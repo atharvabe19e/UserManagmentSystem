@@ -1,12 +1,4 @@
-import {
-  View,
-  Text,
-  StyleSheet,
-  TouchableOpacity,
-  FlatList,
-  Alert,
-  Image,
-} from 'react-native';
+import {  View,  Text,  StyleSheet,  TouchableOpacity,  FlatList,  Alert,  Image,} from 'react-native';
 import React, {useEffect, useState} from 'react';
 import {useIsFocused, useNavigation} from '@react-navigation/native';
 import {openDatabase} from 'react-native-sqlite-storage';
@@ -62,18 +54,19 @@ const Home = () => {
   return (
     <View style={styles.container}>
       <FlatList
-      style={{padding:10}}
+        style={{padding: 10}}
         data={userList}
         renderItem={({item, index}) => {
           return (
-            <TouchableOpacity style={[styles.userItem,{padding:5}]}>
+            <TouchableOpacity style={[styles.userItem, {padding: 5}]}>
               <Text style={styles.itemText}>{'Name: ' + item.user_name}</Text>
               <Text style={styles.itemText}>{'City: ' + item.user_city}</Text>
-              <Text style={styles.itemText}>{'Number: ' + item.user_contact}</Text>
+              <Text style={styles.itemText}>
+                {'Number: ' + item.user_contact}
+              </Text>
               <Text style={styles.itemText}>{'Email: ' + item.user_email}</Text>
 
               <View style={[styles.belowView]}>
-
                 <TouchableOpacity
                   onPress={() => {
                     navigation.navigate('UpdateUser', {
@@ -85,16 +78,12 @@ const Home = () => {
                         id: item.user_id,
                       },
                     });
-                  }}
-                  >
-                    
+                  }}>
                   <Image
                     source={require('../src/icons/edit.png')}
-                    style={[styles.icons,]}
+                    style={[styles.icons]}
                   />
                 </TouchableOpacity>
-
-
 
                 <TouchableOpacity
                   onPress={() => {

@@ -12,8 +12,7 @@ import {openDatabase} from 'react-native-sqlite-storage';
 
 var db = openDatabase({name: 'UserDatabase.db'});
 
-const LoginPage =  props => {
-    
+const LoginPage = props => {
   const onPressLogin = () => {
     console.log(email + password);
     if (!email || !password) {
@@ -36,11 +35,9 @@ const LoginPage =  props => {
     console.log('Try and remember it please');
   };
 
-  
-  const login = (email) => {
-      
-    props.navigation.navigate('Main')
-        } 
+  const login = email => {
+    props.navigation.navigate('Main');
+  };
 
   const [email, setStateE] = useState(null);
   const [password, setStateP] = useState(null);
@@ -78,7 +75,6 @@ const LoginPage =  props => {
           Don't have a account?? Register
         </Text>
       </TouchableOpacity>
-
     </View>
   );
 };

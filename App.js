@@ -7,18 +7,11 @@ import HomePage from './screens/HomePage';
 import LoginPage from './screens/LoginPage';
 import RegistrationPage from './screens/RegistrationPage';
 import Main from './screens/Main';
-import TempDel from './screens/TempDel';
 import UpdateUser from './screens/UpdateUser';
-
 import { useEffect } from 'react';
-
 import { openDatabase } from 'react-native-sqlite-storage';
 
 var db = openDatabase({ name: 'UserDatabase.db' });
-
-
-
-
 const Stack=createNativeStackNavigator();
 
 
