@@ -58,7 +58,7 @@ const Home = () => {
         data={userList}
         renderItem={({item, index}) => {
           return (
-            <TouchableOpacity style={[styles.userItem, {padding: 5}]}>
+            <View style={[styles.userItem, {padding: 10,marginTop:10,borderRadius:20}]}>
               <Text style={styles.itemText}>{'Name: ' + item.user_name}</Text>
               <Text style={styles.itemText}>{'City: ' + item.user_city}</Text>
               <Text style={styles.itemText}>
@@ -66,8 +66,9 @@ const Home = () => {
               </Text>
               <Text style={styles.itemText}>{'Email: ' + item.user_email}</Text>
 
-              <View style={[styles.belowView]}>
+              <View >
                 <TouchableOpacity
+                style={[styles.belowView]}
                   onPress={() => {
                     navigation.navigate('UpdateUser', {
                       data: {
@@ -85,7 +86,8 @@ const Home = () => {
                   />
                 </TouchableOpacity>
 
-                <TouchableOpacity
+                <TouchableOpacity 
+                style={[styles.belowView]}
                   onPress={() => {
                     deleteUser(item.user_id);
                   }}>
@@ -95,7 +97,7 @@ const Home = () => {
                   />
                 </TouchableOpacity>
               </View>
-            </TouchableOpacity>
+            </View>
           );
         }}
       />
@@ -117,6 +119,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#121b43',
     alignItems: 'center',
     justifyContent: 'center',
+    
   },
   addNewBtn: {
     backgroundColor: 'purple',
@@ -152,9 +155,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#f2f2f2',
     borderRadius: 10,
     height: 50,
+    backgroundColor:'#009688'
+    
   },
   icons: {
-    width: 24,
-    height: 24,
+    width: 35,
+    height: 35,
   },
 });

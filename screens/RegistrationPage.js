@@ -30,9 +30,7 @@ const RegistrationPage = props => {
         },
       );
     });
-    console.log(
-      email + '   ' + password + '   ' + name + '   ' + number + '   ' + city,
-    );
+    console.log(email + '   ' + password + '   ' + name + '   ' + number + '   ' + city, );
   };
 
   const onPressSignUp = async () => {

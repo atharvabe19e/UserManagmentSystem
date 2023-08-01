@@ -51,7 +51,7 @@ const UpdateUser = () => {
     <View style={styles.container}>
       <TextInput
         placeholder="Enter User Name"
-        style={styles.input}
+        style={styles.inputView}
         value={name}
         onChangeText={txt => setName(txt)}
       />
@@ -59,7 +59,7 @@ const UpdateUser = () => {
         placeholder="Enter User Contact"
         value={contact}
         onChangeText={(txt) => setContact(txt)}
-        style={[styles.input, {marginTop: 20}]}
+        style={[styles.inputView, {marginTop: 20}]}
 
         keyboardType="numeric" 
         defaultValue={`${contact}`}
@@ -69,14 +69,14 @@ const UpdateUser = () => {
         placeholder="Enter User City"
         value={city}
         onChangeText={txt => setCity(txt)}
-        style={[styles.input, {marginTop: 20}]}
+        style={[styles.inputView, {marginTop: 20}]}
       />
 
       <TextInput
         placeholder="Enter User Email"
         value={email}
         onChangeText={txt => setEmail(txt)}
-        style={[styles.input, {marginTop: 20}]}
+        style={[styles.inputView, {marginTop: 20}]}
       />
 
       <TouchableOpacity
@@ -94,15 +94,20 @@ export default UpdateUser;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-  },
-  input: {
-    width: '80%',
+    backgroundColor: '#121b43',
+    alignItems: 'center',
+    justifyContent: 'center',
+    
+  },inputView: {
+    width: '75%',
+    backgroundColor: '#009688',
+    borderRadius: 25,
     height: 50,
-    borderRadius: 10,
-    borderWidth: 0.3,
-    alignSelf: 'center',
-    paddingLeft: 20,
-    marginTop: 100,
+    marginBottom: 10,
+    justifyContent: 'center',
+    padding: 15,
+    color:'white'
+    
   },
   addBtn: {
     backgroundColor: 'purple',
