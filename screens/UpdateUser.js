@@ -49,6 +49,9 @@ const UpdateUser = () => {
 
   return (
     <View style={styles.container}>
+      <Text style={{fontSize:30,color:'white',marginBottom:10}}>
+        Edit User
+      </Text>
       <TextInput
         placeholder="Enter User Name"
         style={styles.inputView}
